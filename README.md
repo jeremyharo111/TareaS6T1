@@ -51,3 +51,9 @@ SEED_PASSWORD=admin123
 
 **URL:** `https://localhost:5000/api/Auth/perfil`
 Requiere enviar Cookie `AuthToken`.
+
+
+<img width="1343" height="620" alt="image" src="https://github.com/user-attachments/assets/639bbca1-345a-48a6-bfb1-2f20bab9abdd" />
+<img width="1357" height="634" alt="image" src="https://github.com/user-attachments/assets/ba11ff64-5b4f-4d90-a57e-5e9849b79e53" />
+<img width="554" height="637" alt="image" src="https://github.com/user-attachments/assets/abcd55db-53e3-4b3b-a8df-353a6d901f4b" />
+
