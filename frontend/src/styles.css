@@ -1,0 +1,42 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+
+:root {
+  --primary-blue: #0d6efd;
+  --secondary-blue: #0a58ca;
+  --bg-color: #f8f9fa;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.shadow-custom {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Más sutil y profesional */
+}
+
+.rounded-custom {
+  border-radius: 12px !important;
+}
+
+.sidebar-hover:hover {
+  background-color: #e9ecef !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Fix input group radiuses */
+.input-group > .form-control.rounded-custom {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.input-group > .btn.rounded-custom {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}

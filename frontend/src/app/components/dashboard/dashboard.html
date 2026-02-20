@@ -1,0 +1,52 @@
+<div class="d-flex flex-column vh-100 bg-light">
+  <!-- Header -->
+  <header class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold fs-4" href="#">
+        <i class="bi bi-box-seam me-2"></i> Mi Sistema Web
+      </a>
+      <div class="d-flex align-items-center">
+        <span class="text-white fw-medium me-3">Hola, {{ currentUser }}</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="d-flex flex-grow-1 overflow-hidden">
+    <!-- Sidebar -->
+    <aside class="bg-white border-end shadow-sm flex-shrink-0" style="width: 280px">
+      <div class="d-flex flex-column h-100 p-3">
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item mb-2">
+            <a
+              href="#"
+              class="nav-link text-secondary fw-semibold bg-white p-3 rounded-custom sidebar-hover"
+            >
+              <i class="bi bi-cart me-2"></i> Productos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-white fw-bold bg-primary p-3 rounded-custom shadow-sm cursor-pointer"
+              (click)="logout()"
+            >
+              <i class="bi bi-box-arrow-right me-2"></i> Cerrar sesión
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1 p-4 overflow-auto">
+      <div class="container-fluid">
+        <div class="card shadow-custom rounded-custom border-0 p-4">
+          <h2 class="text-primary fw-bold mb-3">Dashboard</h2>
+          <p class="text-muted fs-5">
+            Bienvenido al panel principal de la aplicación. Has iniciado sesión exitosamente con
+            validación desde el backend en .NET y guardado el estado en LocalStorage en Angular.
+          </p>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

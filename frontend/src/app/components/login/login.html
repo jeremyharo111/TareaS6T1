@@ -1,0 +1,73 @@
+<div class="container-fluid bg-light min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="row w-100 justify-content-center">
+    <div class="col-md-5 col-lg-4">
+      <div class="card shadow-custom rounded-custom border-0 p-4 bg-white">
+        <div class="card-body">
+          <div class="text-center mb-4">
+            <h2 class="text-primary fw-bold">Bienvenido</h2>
+            <p class="text-muted">Inicia sesión en tu cuenta</p>
+          </div>
+
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div *ngIf="error" class="alert alert-danger rounded-custom text-center" role="alert">
+              {{ error }}
+            </div>
+
+            <div class="mb-3">
+              <label for="username" class="form-label text-secondary fw-semibold">Usuario</label>
+              <input
+                type="text"
+                formControlName="username"
+                class="form-control rounded-custom p-3"
+                [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
+                id="username"
+                placeholder="Ingresa tu usuario"
+              />
+              <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+                <div *ngIf="f['username'].errors['required']">El usuario es requerido</div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="password" class="form-label text-secondary fw-semibold">Contraseña</label>
+              <div class="input-group">
+                <input
+                  [type]="showPassword ? 'text' : 'password'"
+                  formControlName="password"
+                  class="form-control rounded-custom p-3"
+                  [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+                  id="password"
+                  placeholder="Tu contraseña"
+                />
+                <button
+                  class="btn btn-outline-primary rounded-custom"
+                  type="button"
+                  (click)="togglePassword()"
+                >
+                  {{ showPassword ? 'Ocultar' : 'Mostrar' }}
+                </button>
+                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                  <div *ngIf="f['password'].errors['required']">La contraseña es requerida</div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              [disabled]="loading"
+              class="btn btn-primary w-100 rounded-custom p-3 fw-bold fs-5 shadow-sm"
+              type="submit"
+            >
+              <span
+                *ngIf="loading"
+                class="spinner-border spinner-border-sm me-2"
+                role="status"
+                aria-hidden="true"
+              ></span>
+              Iniciar Sesión
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
